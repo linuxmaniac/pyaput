@@ -55,14 +55,14 @@ def send_file(prefix: str, file: Path):
     url = urljoin(settings.aptly_api_url, f"files/{prefix}/")
     with file.open("rb") as f:
         r = requests.post(url, files={"file": f})
-    console.log(f"{file.name} sent to {url}:{r.status_code}")
+    console.print(f"{file.name} sent to {url}:{r.status_code}")
     assert r.status_code == requests.codes.ok
 
 
 def process_changes(changes: Changes, changes_file: Path) -> set:
     ok_files = set()
     missing_files = set()
-    console.log(f"processing {changes_file}")
+    console.print(f"processing {changes_file}")
     base_dir = changes_file.parent
     if "Files" not in changes:
         err_console.print(f"'Files' not found at {changes_file}")
@@ -70,7 +70,7 @@ def process_changes(changes: Changes, changes_file: Path) -> set:
     for info in changes["Files"]:
         file_path = base_dir / info["name"]
         if file_path.is_file():
-            console.log(f"+ {file_path}")
+            console.print(f"+ {file_path}")
             ok_files.add(file_path)
         else:
             err_console.print(f"file {file_path} not found")

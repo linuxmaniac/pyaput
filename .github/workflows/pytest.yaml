@@ -5,7 +5,10 @@ on:
   pull_request:
 
 env:
-  COLUMNS: 120
+  COLUMNS: 1200
+  TERM: dump
+  TTY_COMPATIBLE: 0
+  TTY_INTERACTIVE: 0
 
 jobs:
   pytest:
