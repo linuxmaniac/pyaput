@@ -1,0 +1,63 @@
+Format: 1.8
+Date: Thu, 23 Oct 2025 09:04:52 +0200
+Source: srsran4g
+Binary: libsrsran4g libsrsran4g-dbgsym libsrsran4g-dev srsenb srsenb-dbgsym srsepc srsepc-dbgsym srsran4g srsue srsue-dbgsym
+Architecture: source amd64 all
+Version: 23.11-1~bpo13+1
+Distribution: trixie-backports
+Urgency: medium
+Maintainer: Debian Mobcom Maintainers <Debian-mobcom-maintainers@lists.alioth.debian.org>
+Changed-By: Victor Seva <vseva@debian.org>
+Description:
+ libsrsran4g - Common files for srsRAN
+ libsrsran4g-dev - Static libraries and headers for srsran
+ srsenb     - Complete SDR LTE eNodeB application
+ srsepc     - Light-weight LTE core network implementation
+ srsran4g   - LTE software suite for software defined radios (metapackage)
+ srsue      - User Equipment implementation for LTE
+Changes:
+ srsran4g (23.11-1~bpo13+1) trixie-backports; urgency=medium
+ .
+   * Rebuild for trixie-backports.
+Checksums-Sha1:
+ 42695e7a2a2eb97c62b7850114bfe96fc98f42ba 1626 srsran4g_23.11-1~bpo13+1.dsc
+ 3cda48eb65c393a1c91c87b2b0aa12f4c5efb23f 5860 srsran4g_23.11-1~bpo13+1.debian.tar.xz
+ 16179a6bbe28d3b9dbe69bfb6ccd664e67d65d69 1723272 libsrsran4g-dbgsym_23.11-1~bpo13+1_amd64.deb
+ 0c83a61a25cc4f241a4ead4a6c150e190c7f2302 5010340 libsrsran4g-dev_23.11-1~bpo13+1_amd64.deb
+ 8a210f8c38d0eaeb7b9488b315a802f6d97ad59f 242060 libsrsran4g_23.11-1~bpo13+1_amd64.deb
+ f78717b1dfc539e34c59fab617ee3b8d8a0bdaac 71532804 srsenb-dbgsym_23.11-1~bpo13+1_amd64.deb
+ 337c0f1884b7af2383e2f53ed18036b453c938de 4193128 srsenb_23.11-1~bpo13+1_amd64.deb
+ 7c4d375f9c2a0879b419afc5a6300235f269a0a8 13700040 srsepc-dbgsym_23.11-1~bpo13+1_amd64.deb
+ 30c009201958cbce2de13a454eddd08fa2d937cb 727028 srsepc_23.11-1~bpo13+1_amd64.deb
+ f95b6026385ff579876909367a9501cf8ab004e7 6268 srsran4g_23.11-1~bpo13+1_all.deb
+ 4e479975a3aebc084a7d967fdbd1788abac9bf2f 15699 srsran4g_23.11-1~bpo13+1_amd64.buildinfo
+ 0e99228303f85bf12a491097edd7b0fd44626f15 49751828 srsue-dbgsym_23.11-1~bpo13+1_amd64.deb
+ e155508e6b599d2e74184a38e2b08fd766e0502a 3400596 srsue_23.11-1~bpo13+1_amd64.deb
+Checksums-Sha256:
+ 870e9e954c6edf256661c745349420bef81fed9516d800e505fc723b4b167b50 1626 srsran4g_23.11-1~bpo13+1.dsc
+ 649e5ef40ef3cd03d66b8532ee958f011edfdd7390462269726cca6256bef89a 5860 srsran4g_23.11-1~bpo13+1.debian.tar.xz
+ 64b762bfd9c7f3f58da7e8a735edf06edc6e44a5ed99b7923be1ba27705ebfa2 1723272 libsrsran4g-dbgsym_23.11-1~bpo13+1_amd64.deb
+ 47de6f88837c3bae8da4a8b5426109c575c4bea7277f8ec69af622abe3162afd 5010340 libsrsran4g-dev_23.11-1~bpo13+1_amd64.deb
+ 700461b4d52638ff07724e90723b5e75d8f6072a2a4d92dd54ce3993f2ec82eb 242060 libsrsran4g_23.11-1~bpo13+1_amd64.deb
+ 4f3da4720507dfcdfa15ee8dca8bebe3e8516772230bcb13474bf188b7fe639c 71532804 srsenb-dbgsym_23.11-1~bpo13+1_amd64.deb
+ b284fc2c15139c1a0bbd00d8f9286321b485f732e2e03fa772241472ea9361e0 4193128 srsenb_23.11-1~bpo13+1_amd64.deb
+ e2cc7c5cc28aa8628bc7dd03cc8c27b89c2cdf89c9de0add5e17dfdc0366c8b3 13700040 srsepc-dbgsym_23.11-1~bpo13+1_amd64.deb
+ d79031276f6c50141d48618c1c652112ffaeea647d02e6ec8f34ca4ddf52d993 727028 srsepc_23.11-1~bpo13+1_amd64.deb
+ 1c225c62729e55a736b5e8e6952d0bae3456f53d5ef6e7ea5731f5ed8dc0860e 6268 srsran4g_23.11-1~bpo13+1_all.deb
+ 6cc50a0bb60d7b3ed15baa9c28c8a60e140907e1ae3ad35a1cdf21b0deb7ec9d 15699 srsran4g_23.11-1~bpo13+1_amd64.buildinfo
+ 853b19394ca3acc528197ffed4475ef1e11b32b542da75232459c9173a1e1de1 49751828 srsue-dbgsym_23.11-1~bpo13+1_amd64.deb
+ a5c7c335f1b855ba63492af310e88e0ca31c0ff6de16400db057cd2d90de919f 3400596 srsue_23.11-1~bpo13+1_amd64.deb
+Files:
+ 275885202ff810a9a54684e8e34a8e27 1626 net optional srsran4g_23.11-1~bpo13+1.dsc
+ 25994f2008e8fe3e22c77fce72fa534e 5860 net optional srsran4g_23.11-1~bpo13+1.debian.tar.xz
+ 8330e9fcbabc9ec9b997d64e518e3aed 1723272 debug optional libsrsran4g-dbgsym_23.11-1~bpo13+1_amd64.deb
+ a6aa2b52d038a1f65e28fe1279d2d82c 5010340 libdevel optional libsrsran4g-dev_23.11-1~bpo13+1_amd64.deb
+ f2a3475c49798a07406a553c6fe2c116 242060 net optional libsrsran4g_23.11-1~bpo13+1_amd64.deb
+ 9e378f769bd0c6f481ca6c5a67bcd669 71532804 debug optional srsenb-dbgsym_23.11-1~bpo13+1_amd64.deb
+ efd6b90e8c4b7c8dd895236cf5d848ee 4193128 net optional srsenb_23.11-1~bpo13+1_amd64.deb
+ 4401e796e0b15abac8aa8b153b23535c 13700040 debug optional srsepc-dbgsym_23.11-1~bpo13+1_amd64.deb
+ c32c34197aadcf7266ffa90182a5de4b 727028 net optional srsepc_23.11-1~bpo13+1_amd64.deb
+ 53acdafd8bb552f56215585aa8cfc560 6268 net optional srsran4g_23.11-1~bpo13+1_all.deb
+ d4225c77f9ef6340d70808e188792c91 15699 net optional srsran4g_23.11-1~bpo13+1_amd64.buildinfo
+ a90ffb4a0db1270ddd3fb68dc7269f63 49751828 debug optional srsue-dbgsym_23.11-1~bpo13+1_amd64.deb
+ d28204763bf5b8f50fad5dadd007a2b4 3400596 net optional srsue_23.11-1~bpo13+1_amd64.deb

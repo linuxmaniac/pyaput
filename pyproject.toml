@@ -12,7 +12,9 @@ readme = {file = "README.md", content-type = "text/markdown"}
 dependencies = [
   "pydantic~=2.0",
   "pydantic-settings",
-  "typer"
+  "typer",
+  "requests",
+  "python-debian"
 ]
 
 [project.optional-dependencies]
@@ -25,9 +27,12 @@ dev = [
   "pytest-asyncio",
   "pytest-cov",
   "pytest-pretty",
+  "requests-mock",
   "ruamel.yaml",
   "ruff",
   "toml-sort",
+  "types-requests",
+  "greenlet",
   "uv"
 ]
 

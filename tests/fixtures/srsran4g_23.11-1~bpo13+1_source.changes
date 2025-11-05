@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Thu, 23 Oct 2025 09:04:52 +0200
+Source: srsran4g
+Architecture: source
+Version: 23.11-1~bpo13+1
+Distribution: trixie-backports
+Urgency: medium
+Maintainer: Debian Mobcom Maintainers <Debian-mobcom-maintainers@lists.alioth.debian.org>
+Changed-By: Victor Seva <vseva@debian.org>
+Changes:
+ srsran4g (23.11-1~bpo13+1) trixie-backports; urgency=medium
+ .
+   * Rebuild for trixie-backports.
+Checksums-Sha1:
+ 42695e7a2a2eb97c62b7850114bfe96fc98f42ba 1626 srsran4g_23.11-1~bpo13+1.dsc
+ 3cda48eb65c393a1c91c87b2b0aa12f4c5efb23f 5860 srsran4g_23.11-1~bpo13+1.debian.tar.xz
+ 4e479975a3aebc084a7d967fdbd1788abac9bf2f 15699 srsran4g_23.11-1~bpo13+1_amd64.buildinfo
+Checksums-Sha256:
+ 870e9e954c6edf256661c745349420bef81fed9516d800e505fc723b4b167b50 1626 srsran4g_23.11-1~bpo13+1.dsc
+ 649e5ef40ef3cd03d66b8532ee958f011edfdd7390462269726cca6256bef89a 5860 srsran4g_23.11-1~bpo13+1.debian.tar.xz
+ 6cc50a0bb60d7b3ed15baa9c28c8a60e140907e1ae3ad35a1cdf21b0deb7ec9d 15699 srsran4g_23.11-1~bpo13+1_amd64.buildinfo
+Files:
+ 275885202ff810a9a54684e8e34a8e27 1626 net optional srsran4g_23.11-1~bpo13+1.dsc
+ 25994f2008e8fe3e22c77fce72fa534e 5860 net optional srsran4g_23.11-1~bpo13+1.debian.tar.xz
+ d4225c77f9ef6340d70808e188792c91 15699 net optional srsran4g_23.11-1~bpo13+1_amd64.buildinfo

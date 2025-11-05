@@ -10,6 +10,12 @@ boltons==25.0.0
     #   glom
 build==1.3.0
     # via pyaput (pyproject.toml)
+certifi==2025.10.5
+    # via requests
+charset-normalizer==3.4.4
+    # via
+    #   python-debian
+    #   requests
 click==8.3.0
     # via typer
 coverage==7.11.0
@@ -20,6 +26,10 @@ face==24.0.0
     # via glom
 glom==24.11.0
     # via pyaput (pyproject.toml)
+greenlet==3.2.4
+    # via pyaput (pyproject.toml)
+idna==3.11
+    # via requests
 iniconfig==2.3.0
     # via pytest
 markdown-it-py==4.0.0
@@ -40,12 +50,12 @@ pluggy==1.6.0
     # via
     #   pytest
     #   pytest-cov
-pydantic==2.12.3
+pydantic==2.12.4
     # via
     #   pyaput (pyproject.toml)
     #   dapperdata
     #   pydantic-settings
-pydantic-core==2.41.4
+pydantic-core==2.41.5
     # via pydantic
 pydantic-settings==2.11.0
     # via
@@ -69,8 +79,16 @@ pytest-cov==7.0.0
     # via pyaput (pyproject.toml)
 pytest-pretty==1.3.0
     # via pyaput (pyproject.toml)
+python-debian==1.0.1
+    # via pyaput (pyproject.toml)
 python-dotenv==1.2.1
     # via pydantic-settings
+requests==2.32.5
+    # via
+    #   pyaput (pyproject.toml)
+    #   requests-mock
+requests-mock==1.12.1
+    # via pyaput (pyproject.toml)
 rich==14.2.0
     # via
     #   pytest-pretty
@@ -93,6 +111,8 @@ typer==0.20.0
     # via
     #   pyaput (pyproject.toml)
     #   dapperdata
+types-requests==2.32.4.20250913
+    # via pyaput (pyproject.toml)
 typing-extensions==4.15.0
     # via
     #   mypy
@@ -104,5 +124,9 @@ typing-inspection==0.4.2
     # via
     #   pydantic
     #   pydantic-settings
+urllib3==2.5.0
+    # via
+    #   requests
+    #   types-requests
 uv==0.9.7
     # via pyaput (pyproject.toml)
