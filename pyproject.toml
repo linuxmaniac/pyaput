@@ -45,6 +45,7 @@ omit = [
   "./pyaput/__init__.py",
   "./tests/*"
 ]
+core = "ctrace"
 concurrency = ["thread", "greenlet"]
 
 [tool.mypy]
