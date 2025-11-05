@@ -1,5 +1,6 @@
 import asyncio
 import requests
+from requests.auth import HTTPBasicAuth
 from urllib.parse import urljoin
 from pathlib import Path
 from functools import wraps
@@ -51,11 +52,10 @@ def get_changes(changes_file) -> Changes:
     return changes
 
 
-def send_file(prefix: str, file: Path):
-    url = urljoin(settings.aptly_api_url, f"files/{prefix}/")
+def send_file(url: str, file: Path, auth: HTTPBasicAuth):
     with file.open("rb") as f:
-        r = requests.post(url, files={"file": f})
-    console.print(f"{file.name} sent to {url}:{r.status_code}")
+        r = requests.post(url, files={"file": f}, auth=auth)
+    console.print(f"{file.name} sent:{r.status_code}")
     assert r.status_code == requests.codes.ok
 
 
@@ -101,8 +101,11 @@ def files(
     if len(changes_files) == 0:
         raise typer.Exit(1)
     prefix = get_prefix(changes_info)
+    url = urljoin(settings.aptly_api_url, f"files/{prefix}/")
+    console.print(f"prefix:{prefix} url:{url}")
+    auth = HTTPBasicAuth(settings.aptly_api_auth_user, settings.aptly_api_auth_pwd)
     for file in changes_files:
-        send_file(prefix, file)
+        send_file(url, file, auth)
 
 
 @app.command(help=f"show config of {settings.project_name}.")
