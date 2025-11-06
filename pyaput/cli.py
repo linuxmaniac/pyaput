@@ -36,6 +36,10 @@ def version():
     print(f"{settings.project_name} - {__version__}")
 
 
+def get_auth():
+    return HTTPBasicAuth(settings.aptly_api_auth_user, settings.aptly_api_auth_pwd)
+
+
 def get_prefix(changes: Changes) -> str:
     try:
         source = changes["Source"]
@@ -103,9 +107,18 @@ def files(
     prefix = get_prefix(changes_info)
     url = urljoin(settings.aptly_api_url, f"files/{prefix}/")
     console.print(f"prefix:{prefix} url:{url}")
-    auth = HTTPBasicAuth(settings.aptly_api_auth_user, settings.aptly_api_auth_pwd)
+    auth = get_auth()
     for file in changes_files:
         send_file(url, file, auth)
+
+
+@app.command(help="include uploaded files")
+def include(repo: str, prefix: str):
+    data = {"name": repo, "dir": prefix, "forceReplace": 1, "acceptUnsigned": 1, "ignoreSignature": 1, "_async": False}
+    url = urljoin(settings.aptly_api_url, f"repos/{repo}/include/{prefix}")
+    r = requests.post(url, data=data, auth=get_auth())
+    assert r.status_code == requests.codes.ok
+    console.print(r.text)
 
 
 @app.command(help=f"show config of {settings.project_name}.")
